@@ -671,7 +671,7 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Content
+# Content - Site, Flex Settings, Front Page, Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -742,6 +742,178 @@ a:hover, a:active {
           flex: 1;
 }
 
+/* CONTENT AREA */
+.content-area {
+  background: #fff;
+}
+
+/*CALL TO ACTION*/
+#call-to-action {
+  color: #fff;
+  padding: 4rem 0;
+  background: #F45747 url("/teph.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-filter: greyscale(20);
+          filter: greyscale(20);
+  opacity: .4;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+  color: #fff;
+  padding: 4rem 0;
+  background: #404040;
+}
+
+/* programs */
+#programs {
+  padding: 4rem 0;
+}
+
+/* ABOUT STEPH */
+#about-steph {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  color: #fff;
+  background: #A4EDD9;
+}
+
+.front-left, front-right {
+  width: 100%;
+  float: none;
+  padding: 0;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+  padding: 4rem 0;
+}
+
+.testimonials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: row wrap;
+      -ms-flex: row wrap;
+          flex: row wrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonials li {
+  padding: 2rem 0 3rem;
+  width: 100%;
+}
+
+.testimonial-thumb {
+  max-width: 30%;
+  height: auto;
+  float: left;
+}
+
+.testimonial-text {
+  float: left;
+  width: 60%;
+  margin-left: 10%;
+}
+
+.testimonial-thumb img {
+  border-radius: 210px;
+  border: 5px solid #fff;
+}
+
+.testimonial-name {
+  /*  font-weight: bold;
+    font-size: 24px;
+    font-size: 2.4rem;*/
+  margin: 1rem 0;
+}
+
+.testimonial-excerpt {
+  /* font-size: 16px;
+   font-size: 1.6rem;*/
+}
+
+/* programs */
+#programs {
+  padding: 4rem 0;
+}
+
+#programs .section-title {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #A4EDD9;
+}
+
+.programs-list {
+  margin: 0 -4rem 0 -2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.programs-list li {
+  display: block;
+  color: #404040;
+  margin-bottom: 0rem;
+  margin-left: 0;
+  margin-right: 4rem;
+  margin-top: 0;
+  padding-bottom: 0rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0rem;
+  text-decoration: none;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+       break-inside: avoid-column;
+}
+
+.programs-list li,
+.programs-list li a,
+.programs-list li h3 {
+  transition: all .5s ease;
+}
+
+.programs-list li:hover {
+  background: #A4EDD9;
+}
+
+.programs-list li:hover,
+.programs-list li:hover a,
+.programs-list li:hover a:hover,
+.programs-list li:hover a h3 {
+  color: white !important;
+}
+
+.programs-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.programs-list .more-link {
+  text-decoration: underline;
+  float: right;
+}
+
+.indent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-footer {
+  color: #fff;
+  background-color: #000;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -776,6 +948,85 @@ object {
   max-width: 100%;
 }
 
+@media screen and (min-width: 750px) {
+  .front-left {
+    width: 50%;
+    float: left;
+    padding-right: 4rem;
+  }
+
+  .front-right {
+    width: 50%;
+    float: right;
+    padding-left: 4rem;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1099px) {
+  .indent {
+    margin: 0;
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .indent {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 450px) {
+  .programs-title {
+    margin-bottom: 0;
+    margin-right: 10%;
+    width: 40%;
+    float: left;
+  }
+
+  .programs-lede {
+    width: 50%;
+    min-height: 376px;
+    float: left;
+  }
+}
+@media screen and (min-width: 950px) {
+  .programs-list {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+
+  #contact.magic-minus {
+    margin-top: -60px;
+  }
+}
+/* TESTIMONIALS RESPONSIVE */
+@media screen and (min-width: 650px) {
+  .testimonials li {
+    padding: 4rem 4rem;
+  }
+}
+@media screen and (min-width: 950px) {
+  .testimonials li {
+    width: 33.3333333333%;
+    padding: 2rem 4rem;
+    float: left;
+  }
+
+  .testimonial-thumb {
+    max-width: 210px;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .testimonial-text {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .testimonial-name {
+    text-align: center;
+  }
+}
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/

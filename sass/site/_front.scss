@@ -1,0 +1,154 @@
+/* CONTENT AREA */
+.content-area {
+	background: #fff;
+}
+				
+/*CALL TO ACTION*/ 
+#call-to-action {
+    color: #fff;
+    padding: 4rem 0;
+    background: $coral url("/teph.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: greyscale(20);
+    opacity: .4;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+	color: #fff;
+    padding: 4rem 0;
+    background: $charcoal;
+   }
+
+/* programs */
+#programs {
+    padding: 4rem 0;
+}
+
+/* ABOUT STEPH */ 
+#about-steph {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+	color: #fff;
+    background: $mint;
+ }
+ 
+.front-left, front-right {
+	width:100%;
+	float: none;
+	padding: 0;	
+}
+
+/* TESTIMONIALS */ 
+
+#testimonials {
+    padding: 4rem 0;
+}
+.testimonials {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.testimonials li {
+    padding: 2rem 0 3rem;
+    width: 100%;
+}
+
+.testimonial-thumb {
+    max-width: 30%;
+    height: auto;
+    float: left;
+}
+
+.testimonial-text {
+    float: left;
+    width: 60%;
+    margin-left: 10%;
+}
+.testimonial-thumb img {
+    border-radius: 210px;
+    border: 5px solid #fff;
+}
+
+.testimonial-name {
+  /*  font-weight: bold;
+    font-size: 24px;
+    font-size: 2.4rem;*/
+    margin: 1rem 0;
+}
+
+.testimonial-excerpt {
+   /* font-size: 16px;
+    font-size: 1.6rem;*/
+}
+
+/* programs */ 
+
+#programs {
+    padding: 4rem 0;
+}
+#programs .section-title {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid $mint;
+}
+
+.programs-list {
+    margin: 0 -4rem 0 -2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.programs-list li {
+    display: block;
+    color: #404040;
+    margin-bottom: 0rem;
+    margin-left: 0;
+    margin-right: 4rem;
+    margin-top: 0;
+    padding-bottom: 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0rem;
+    text-decoration: none;
+    -webkit-column-break-inside: avoid;
+                   break-inside: avoid-column;
+}
+
+.programs-list li,
+.programs-list li a,
+.programs-list li h3 {
+    transition: all .5s ease;
+}
+
+.programs-list li:hover {
+    background: $mint;
+}
+
+.programs-list li:hover,
+.programs-list li:hover a,
+.programs-list li:hover a:hover,
+.programs-list li:hover a h3 {
+    color: hsl(0, 0%, 100%)!important;
+}
+
+.programs-title {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.programs-list .more-link {
+    text-decoration: underline;
+    float: right;
+}
+.indent {
+    max-width: 1000px;
+    margin: 0 auto;
+}

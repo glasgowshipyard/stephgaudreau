@@ -11,7 +11,7 @@ get_header(); ?>
 		global $more;
 	?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area front">
 		<main id="main" class="site-main" role="main">
 
 			<section id="call-to-action"><!-- This is the header and call to action split -->
@@ -113,11 +113,25 @@ get_header(); ?>
 					?>
 				</div><!-- .indent -->
 			</section><!-- #testimonials -->			
-			<section id="meet"><!-- Meet Steph -->
+			<section id="about-steph"><!-- About Steph -->
 				<div class="indent">
-				<h2 class="section-title">About Steph</h2>
+					
+					<?php 
+						$query = new WP_Query( 'pagename=about-steph' );
+					// The Loop
+						if ( $query->have_posts() ) {
+							while ( $query->have_posts() ) {
+								$query->the_post();
+								echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+								echo '<div class="entry-content">';
+								the_content();
+								echo '</div>';
+							}
+						}
 				
-				
+						/* Restore original Post Data */
+						wp_reset_postdata();
+					?>
 				</div>
 			</section>
 
