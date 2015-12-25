@@ -7,11 +7,13 @@
 #call-to-action {
     color: #fff;
     padding: 4rem 0;
-    background: $coral url("/teph.jpg") no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: greyscale(20);
-    opacity: .4;
+    background: $coral;
+	}
+	
+/*HEADER IMAGE*/
+.header-image img{
+	 display: block;
+	 margin: 0 auto;
 }
 
 /* TESTIMONIALS */

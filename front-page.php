@@ -15,6 +15,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section id="call-to-action"><!-- This is the header and call to action split -->
+				<?php if ( get_header_image() ) : ?>
+					<div class="header-image">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+						</a>
+				<?php endif; // End header image check. ?>
 				<div class="indent">
 					<div class="front-left">
 						<h2 class="section-title">Call to Action</h2>
@@ -23,6 +29,7 @@ get_header(); ?>
 						Opt-in
 					</div>
 				</div>
+				</div> <!-- header image closes -->
 			</section>
 			
 			<section id="programs">
