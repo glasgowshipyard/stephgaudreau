@@ -71,6 +71,10 @@ object {
     .testimonials li {
         padding: 4rem 4rem;
     }
+    
+    .call-to-action-background-image {
+	    min-height: 400px;
+	    }
 }
 
 @media screen and (min-width: 950px) {
