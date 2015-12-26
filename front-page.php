@@ -14,22 +14,39 @@ get_header(); ?>
 	<div id="primary" class="content-area front">
 		<main id="main" class="site-main" role="main">
 
-			<section id="call-to-action"><!-- This is the header and call to action split -->
-				<?php if ( get_header_image() ) : ?>
-					<div class="header-image">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-						</a>
-				<?php endif; // End header image check. ?>
+			<section id="call-to-action" class="call-to-action-background-image" style="background-image: url(<?php header_image(); ?>)"><!-- This is the header and call to action split -->
 				<div class="indent">
 					<div class="front-left">
 						<h2 class="section-title">Call to Action</h2>
+						Loo weklfb es;rbn esrtb
+						]srtbsr
+						tbs
+						nb
+						srt
+						nsns
+						trn
+						sns
+						nsrtn
+						srtn
+						srtnsn
 					</div>
 					<div class="front-right">
-						Opt-in
+						<h2 class="section-title">Opt-In</h2>
+						
+						srtb
+						srtb
+						srtb
+						strb
+						srtb
+						stb
+						stb
+						srtb
+						srtbt
+						bs
+						rtb
+						rt
 					</div>
 				</div>
-				</div> <!-- header image closes -->
 			</section>
 			
 			<section id="programs">

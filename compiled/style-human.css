@@ -745,13 +745,12 @@ a:hover, a:active {
 #call-to-action {
   color: #fff;
   padding: 4rem 0;
-  background: #F45747;
 }
 
 /*HEADER IMAGE*/
-.header-image img {
-  display: block;
-  margin: 0 auto;
+.call-to-action-background-image {
+  background: no-repeat;
+  background-size: cover;
 }
 
 /* TESTIMONIALS */

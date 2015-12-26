@@ -7,13 +7,12 @@
 #call-to-action {
     color: #fff;
     padding: 4rem 0;
-    background: $coral;
 	}
 	
 /*HEADER IMAGE*/
-.header-image img{
-	 display: block;
-	 margin: 0 auto;
+.call-to-action-background-image{
+	 background: no-repeat;
+	 background-size: cover;
 }
 
 /* TESTIMONIALS */
