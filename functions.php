@@ -44,7 +44,8 @@ function stephgaudreau_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'stephgaudreau' ),
+		'primary' 	=> esc_html__( 'Primary', 'stephgaudreau' ),
+		'social' 	=> esc_html__( 'Social', 'stephgaudreau' ),
 	) );
 
 	/*
@@ -107,6 +108,34 @@ function stephgaudreau_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+        'name' 			=> esc_html__( 'Logo', 'stephgaudreau' ),
+        'id' 			=> 'logo',
+        'before_widget' => '<figure class="logo">',
+		'after_widget'	=> '</figure>',
+        'description' 	=> esc_html__( 'logo field.', 'stephgaudreau' ),
+        'before_title' 	=> '<h2>',
+        'after_title' 	=> '</h2>',
+    ) );
+    register_sidebar( array(
+        'name' 			=> esc_html__( 'Front Left', 'stephgaudreau' ),
+        'id' 			=> 'front-left',
+        'before_widget' => '<div class="front-left">',
+		'after_widget' 	=> '</div>',
+        'description' 	=> esc_html__( 'Widget for front left on Front Page.', 'stephgaudreau' ),
+        'before_title' 	=> '<h2 class="section-title">',
+        'after_title' 	=> '</h2>',
+    ) );
+    register_sidebar( array(
+        'name' 			=> esc_html__( 'Front Right', 'stephgaudreau' ),
+        'id' 			=> 'front-right',
+        'before_widget' => '<div class="front-right">',
+		'after_widget' 	=> '</div>',
+        'description' 	=> esc_html__( 'Widget for front right on Front Page.', 'stephgaudreau' ),
+        'before_title' 	=> '<h2 class="section-title">',
+        'after_title' 	=> '</h2>',
+    ) );
+
 }
 add_action( 'widgets_init', 'stephgaudreau_widgets_init' );
 
@@ -114,11 +143,17 @@ add_action( 'widgets_init', 'stephgaudreau_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stephgaudreau_scripts() {
-	wp_enqueue_style( 'stephgaudreau-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'stephgaudreau-style', get_stylesheet_uri(), $in_footer );
+	
+	wp_enqueue_style('stephgaudreau-knockout-fonts','http://cloud.typography.com/6869874/7212752/css/fonts.css', $in_footer);
+	
+	wp_enqueue_style('stephgaudreau-google-fonts','https://fonts.googleapis.com/css?family=Source+Sans+Pro', $in_footer);
+	
+	wp_enqueue_style('stephgaudreau-fontawesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', $in_footer);
 
-	wp_enqueue_script( 'stephgaudreau-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'stephgaudreau-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true , $in_footer);
 
-	wp_enqueue_script( 'stephgaudreau-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'stephgaudreau-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true , $in_footer);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -126,6 +161,11 @@ function stephgaudreau_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'stephgaudreau_scripts' );
+
+function remove_jetpack_styles(){
+wp_deregister_style('grunion.css'); // Grunion contact form
+}
+add_action('wp_print_styles', 'remove_jetpack_styles');
 
 /**
  * Implement the Custom Header feature.

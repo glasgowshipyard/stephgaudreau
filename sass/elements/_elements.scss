@@ -36,3 +36,8 @@ img {
 }
 
 @import "tables";
+
+.logo {
+	float: left;
+	max-width: $logo__size;
+}

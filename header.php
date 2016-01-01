@@ -25,21 +25,16 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'stephgaudreau' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+		<div class="site-branding"><?php if ( dynamic_sidebar('logo') ) : else : endif; ?>
 			<?php if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'stephgaudreau' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'stephgaudreau' ); ?></button>
 			<?php 
 				if ( is_front_page()) {
 				wp_nav_menu( array( 'menu' => 'Front Page Menu' ) );
@@ -47,6 +42,8 @@
 				wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
 				}
 				?>
+			<?php stephgaudreau_social_menu(); ?>
+
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

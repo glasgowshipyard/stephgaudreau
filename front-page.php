@@ -11,41 +11,13 @@ get_header(); ?>
 		global $more;
 	?>
 
-	<div id="primary" class="content-area front">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area-front">
+		<main id="main" class="site-main-front" role="main">
 
 			<section id="call-to-action" class="call-to-action-background-image" style="background-image: url(<?php header_image(); ?>)"><!-- This is the header and call to action split -->
 				<div class="indent">
-					<div class="front-left">
-						<h2 class="section-title">Call to Action</h2>
-						Loo weklfb es;rbn esrtb
-						]srtbsr
-						tbs
-						nb
-						srt
-						nsns
-						trn
-						sns
-						nsrtn
-						srtn
-						srtnsn
-					</div>
-					<div class="front-right">
-						<h2 class="section-title">Opt-In</h2>
-						
-						srtb
-						srtb
-						srtb
-						strb
-						srtb
-						stb
-						stb
-						srtb
-						srtbt
-						bs
-						rtb
-						rt
-					</div>
+					<?php if ( dynamic_sidebar('front-left') ) : else : endif; ?>
+					<?php if ( dynamic_sidebar('front-right') ) : else : endif; ?>
 				</div>
 			</section>
 			
