@@ -150,6 +150,8 @@ function stephgaudreau_scripts() {
 	wp_enqueue_style('stephgaudreau-google-fonts','https://fonts.googleapis.com/css?family=Source+Sans+Pro', $in_footer);
 	
 	wp_enqueue_style('stephgaudreau-fontawesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', $in_footer);
+	
+	wp_enqueue_script( 'stephgaudreau-smoothscroll', get_template_directory_uri() . '/js/stephscripts.js', array(jquery), '20160101', true , $in_footer);
 
 	wp_enqueue_script( 'stephgaudreau-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true , $in_footer);
 

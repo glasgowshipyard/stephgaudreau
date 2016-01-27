@@ -29,7 +29,10 @@ object {
 		margin: 0 (-$size__site-sidebar) 0 0;
 		width: $size__site-main;
 		flex: 2;
-		padding:4rem;
+		padding-top: 1rem;
+		padding-left: 4rem;
+		padding-right:4rem;
+		padding-bottom: 4rem;
 	}
 	
 	.site-main {
@@ -66,13 +69,27 @@ object {
 }
 
 @media screen and (min-width: 1020px) {
-    .front-left {
+		
+    #call-to-action .front-left {
         width: 30%;
+        float: left;
+        font-size: 200%;
+    }
+
+    #call-to-action .front-right {
+        width: 30%;
+        float: right;
+		text-align: right;
+		font-size: 200%;
+    }
+    
+	.front-left {
+        width: 50%;
         float: left;
     }
 
     .front-right {
-        width: 30%;
+        width: 50%;
         float: right;
 		text-align: right;
     }

@@ -1,6 +1,20 @@
+.site-header {
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	z-index: 100;
+	top:0;
+	left: 0;
+	height:115px;
+}
+
 .site-footer {
 	clear: both;
 	width: $size__site-main;
+}
+
+.site-content {
+	margin-top: 115px;
 }
 
 .site-content .widget-area {
@@ -8,7 +22,10 @@
 }
 
 .content-area {
-	padding:4rem;
+	padding-top: 1rem;
+	padding-left: 4rem;
+	padding-right:4rem;
+	padding-bottom: 4rem;
 	}
 
 .site-title {
@@ -17,4 +34,4 @@
 	    margin-top: 0.5em;
 	    position: absolute;
 	    text-transform: uppercase;
-	    }        
+	    }

@@ -9,6 +9,7 @@ a {
 	&:focus,
 	&:hover,
 	&:active {
+		color: $coral;
 		outline: 0;
 	}
 }

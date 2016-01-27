@@ -18,10 +18,19 @@ input[type="submit"] {
 
 	&:hover {
 		border-color: $color__border-button-hover;
+		background-color: #fff;
+		color: $charcoal;
 	}
 
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+		background-color: #fff;
+		color: $charcoal;
+	}
+	
+	& a{
+		color: #fff;
+		min-width: 200px;
 	}
 }
