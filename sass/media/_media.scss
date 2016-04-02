@@ -172,6 +172,15 @@ object {
 	}
 	.main-navigation ul {
 		display: block;
+		margin-left: 2.5em;
+	}
+	
+	#menu-social ul {
+        margin-right: 2.5em;
+        }
+        
+    .site-main {
+		padding: 0 5em;
 	}
 }
 
@@ -223,8 +232,12 @@ object {
     }
     
     #menu-social li a { 
-        padding-left:.5em;
-        padding-right: .5em;
+        padding-left: .2em;
+        padding-right: .2em;
+    }
+    
+    ul {
+	    margin: 0;
     }
 }
 /*--------------------------------------------------------------
