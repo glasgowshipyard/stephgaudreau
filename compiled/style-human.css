@@ -293,6 +293,11 @@ h2 {
 h2.widget-title {
   font-family: "Knockout 33 A", "Knockout 33 B", sans-serif;
   text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.site-header {
+  box-shadow: 0 6px 6px -6px grey;
 }
 
 p {
@@ -635,7 +640,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: #404040;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover, a:focus, a:active {
   color: #404040;
@@ -643,6 +648,11 @@ a:hover, a:focus, a:active {
 a:focus, a:hover, a:active {
   color: #F45747;
   outline: 0;
+}
+
+.site-title a,
+.entry-title a {
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -923,7 +933,6 @@ a:focus, a:hover, a:active {
   z-index: 100;
   top: 0;
   left: 0;
-  height: 115px;
 }
 
 .site-footer {
@@ -1348,6 +1357,15 @@ object {
 
   .main-navigation ul {
     display: block;
+    margin-left: 2.5em;
+  }
+
+  #menu-social ul {
+    margin-right: 2.5em;
+  }
+
+  .site-main {
+    padding: 0 5em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1397,8 +1415,12 @@ object {
   }
 
   #menu-social li a {
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+
+  ul {
+    margin: 0;
   }
 }
 /*--------------------------------------------------------------

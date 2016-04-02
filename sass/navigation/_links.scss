@@ -1,6 +1,6 @@
 a {
 	color: $color__link;
-	text-decoration: none;
+	text-decoration: underline;
 	&:hover,
 	&:focus,
 	&:active {
@@ -12,4 +12,9 @@ a {
 		color: $coral;
 		outline: 0;
 	}
+}
+
+.site-title a,
+.entry-title a {
+	text-decoration: none;
 }
