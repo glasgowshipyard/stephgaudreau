@@ -505,6 +505,12 @@ input[type="submit"] a {
   min-width: 200px;
 }
 
+.woocommerce a.button {
+  font-size: .8em;
+  padding: .6em;
+  font-weight: 500;
+}
+
 .front-right input[type="text"],
 .front-right input[type="email"],
 .front-right input[type="url"],
@@ -801,6 +807,10 @@ a:focus, a:hover, a:active {
   content: '\f0e1';
 }
 
+.menu-social li a[href*="stephgaudreau.com/cart"]::before {
+  content: '\f07a';
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1049,7 +1059,7 @@ a:focus, a:hover, a:active {
   padding-top: 4rem;
   padding-bottom: 6rem;
   color: #fff;
-  background: #A4EDD9;
+  background: #067887;
 }
 
 .front-left, front-right {
@@ -1147,7 +1157,7 @@ a:focus, a:hover, a:active {
 }
 
 .programs-list li:hover {
-  background: #A4EDD9;
+  background: #F45747;
 }
 
 .programs-list li:hover,
@@ -1404,6 +1414,12 @@ object {
 
   .main-navigation ul ul a {
     width: 100%;
+  }
+
+  .woocommerce a.button {
+    font-size: .8em !important;
+    padding: .6em !important;
+    font-weight: 500 !important;
   }
 }
 @media screen and (max-width: 600px) {
