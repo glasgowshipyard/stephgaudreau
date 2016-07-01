@@ -33,10 +33,20 @@ ol a:before{
 	background: #F45747;
 	height: 2em;
 	width: 2em;
-	border: .3em solid #fff;
+	border: 3px solid #fff;
 	text-align: center;
 	border-radius: 2em;
 }
+
+#comments ol a:before {
+	display: none;
+}
+
+ol a:hover{
+     text-decoration: none;
+     color: $color__text-main !important;
+     }
+
 
 li > ul,
 li > ol {

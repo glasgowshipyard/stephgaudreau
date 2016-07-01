@@ -16,12 +16,7 @@ input[type="submit"] {
 		//padding: .6em 1em .4em;
 		//text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
-	&:hover {
-		border-color: $color__border-button-hover;
-		background-color: #fff;
-		color: $charcoal;
-	}
-
+	&:hover,
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
@@ -31,7 +26,6 @@ input[type="submit"] {
 	
 	& a{
 		color: #fff;
-		min-width: 200px;
 	}
 }
 
@@ -39,4 +33,21 @@ input[type="submit"] {
 font-size: .8em;
 padding: .6em;
 font-weight: 500;
+}
+
+.sensei-login-submit .button,
+input.course-start,
+button.single_add_to_cart_button.button.alt {
+	background: $coral;
+	color: #fff;
+	
+&:hover,
+	&:active,
+	&:focus {
+		background: #e34636;
+	}
+	
+	& a{
+		color: #fff;
+	}
 }

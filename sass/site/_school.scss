@@ -1,0 +1,396 @@
+#my-courses  {
+  .register-link {
+    clear: both;
+  }
+  form#loginform {
+	  width:50%;
+    label {
+      display: block;
+    }
+    input[type="text"], input[type="password"] {
+      width: 90%;
+    }
+  }
+  &.ui-tabs {
+    position: relative;
+    zoom: 1;
+    .ui-tabs-nav {
+      margin: 0 0 10px!important;
+      float: left;
+      width: 100%;
+      padding: .2em 0 0;
+      li {
+        list-style: none;
+        float: left;
+        position: relative;
+        top: 1px;
+        margin: 0 .2em 1px 0;
+        border-bottom: 0 !important;
+        padding: 0;
+        white-space: nowrap;
+        a {
+          float: left;
+          padding: 5px 20px;
+          font-weight: bold;
+          color: #777;
+          text-decoration: none;
+          outline: none!important;
+          line-height: 1;
+          cursor: pointer;
+        }
+        &.ui-tabs-selected {
+          margin-bottom: 0;
+          padding-bottom: 1px;
+          a {
+            cursor: text;
+          }
+        }
+        &.ui-state-hover {
+          a {
+            color: #555;
+          }
+        }
+        &.ui-state-active {
+          a {
+            color: #333;
+            background: #e2e2e2;
+            border-radius: 100px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+          }
+        }
+        &.ui-state-disabled {
+          a {
+            cursor: text;
+          }
+        }
+        &.ui-state-processing {
+          a {
+            cursor: text;
+          }
+        }
+      }
+    }
+    &.ui-tabs-collapsible {
+      .ui-tabs-nav {
+        li {
+          &.ui-tabs-selected {
+            a {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .ui-tabs-panel {
+      clear: both;
+      display: block;
+      border-width: 0;
+      padding: 1em 0;
+      background: none;
+    }
+    .ui-tabs-hide {
+      display: none !important;
+    }
+  }
+}
+
+/* Course Progress Bars */
+.meter {
+  height: 25px;  /* Can be anything */
+  position: relative;
+  margin: 20px 0; /* Just for demo spacing */
+  background: darken($bg_light, 5%);
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  clear: both;
+  > span {
+    display: block;
+    padding: 1px 10px 0 0;
+    height: 100%;
+    background-color: $success;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    color: #fff;
+    min-width: 45px;
+    font-weight: bold;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    @include borderbox();
+  }
+  &.orange > span {
+    background: $bg_dark;
+  }
+  &.red > span {
+    background: $error;
+  }
+}
+
+.alignleft {
+  float: left;
+  margin:0 1.618em 1em 0;
+}
+.alignright {
+  float: right;
+  margin:0 0 1em 1.618em;
+}
+.aligncenter {
+  display: block;
+  text-align: center;
+  margin:0 auto 1.618em;
+}
+
+.nav-next, .nav-prev  {
+  width: auto!important;
+  //background: $charcoal !important;
+}
+
+.nav-next  {
+  float: right;
+  .meta-nav:before {
+    content: "\2192";
+  }
+}
+
+.nav-prev  {
+  float: left;
+  .meta-nav:before {
+    content: "\2190";
+  }
+}
+
+/* Course Archives */
+.sensei-ordering {
+  margin: 0 0 1em 0;
+}
+
+.sensei-course-filters {
+  margin: 0 0 2em 0;
+  padding: 0;
+    li {
+      float: left;
+      list-style: none;
+      .entry-content & {
+        margin: 0;
+      }
+        a {
+          display: block;
+          border: 2px solid #ddd;
+          margin-right: 5px;
+          padding: 0.5em 1em;
+          background: #eee;
+            &:hover {
+              background: #fff;
+              text-decoration: none;
+              border-color: #ccc;
+            }
+            &.active {
+              border-color: #ddd;
+              background: #fff;
+              cursor: default;
+            }
+        }
+    }
+}
+
+.course-container  {
+  margin: 0 0 4.236em;
+  .archive-header  {
+    border: none;
+    padding: 0;
+    h1  {
+      margin: 0;
+      padding: 0 0 .53em;
+      border: none;
+      font-size: 1.387em;
+      color: #333;
+      border-bottom: 2px solid $border_main;
+      width: 100%;
+    }
+  }
+  .navigation  {
+    float: right;
+    margin: -10px 0 0;
+    text-align: right;
+    a  {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+  }
+}
+
+/* Course Results */
+.course-results-lessons {
+  h2 {
+    margin: 20px 0;
+    &.total-grade {
+      text-decoration: underline;
+      .lesson-grade {
+        text-decoration: underline;
+      }
+    }
+    .lesson-grade {
+      float: right;
+    }
+  }
+}
+
+/* Buttons */
+
+.sensei-course-filters,
+ul.course-container {
+	list-style: none;
+}
+
+/* Widget */
+
+.widget.widget_sensei_course_progress {
+	padding: 0;
+	background: $widget !important;
+	border-radius: 5px;
+	header {
+		padding: 1.618em 1.618em 0;
+		h2 {
+			font-size: 1.618em;
+			margin-bottom: 0.618em;
+			a {
+				text-decoration: none;
+			}
+		}
+		h3 {
+		  	padding-bottom: 0.618em;
+			margin-bottom: 0.168em;
+			border: none;
+		}
+	}
+	.course-progress-lessons {
+		list-style: none;
+		clear: both;
+		#sidebar & {
+			margin: 0;
+		}
+		.course-progress-module {
+			border: none;
+			border-bottom: none !important;
+			margin: 0;
+			padding: 0.618em 1.618em 0.618em 1em;
+			background: rgba(255,255,255,0.6);
+			h3 {
+				margin: 0;
+				border: none;
+				padding: 0;
+			}
+		}
+		.course-progress-lesson {
+			border: none;
+			margin: 0;
+			padding: 0;
+			a, span {
+				display: block;
+				border-bottom: 1px solid rgba(0,0,0,0.05);
+				padding: 0.618em 1.618em 0.618em 3.618em;
+				font-weight: bold;
+				background: rgba(255,255,255,0.8);
+				position: relative;
+				&:before {
+					font-family: 'Fontawesome';
+					display: inline-block;
+					font-size: 150%;
+					margin-right: 0.618em;
+					font-weight: 400;
+					line-height: 1em;
+					width: 1em;
+					position: absolute;
+					left: 1em;
+					top: 0.5em;
+					content: '\f10c';
+					color: rgba(0,0,0,0.1);
+				}
+			}
+			a:hover {
+				background: rgba(255,255,255,1);
+				text-decoration: none;
+			}
+			&:first-child {
+				a, span {
+					border-top: 1px solid rgba(0,0,0,0.1);
+				}
+			}
+			&.current span {
+				background: rgba(255,255,255,1);
+				color: rgba(0,0,0,0.5);
+				border-top: 1px solid rgba(0,0,0,0.04);
+				&:before {
+					content: '\f138';
+					color: rgba(0,0,0,0.2);
+				}
+			}
+			&.completed {
+				a, span {
+					color: rgba(0,0,0,0.4);
+					font-weight: normal;
+					&:before {
+						content: '\f058';
+						color: #63a95f;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.widget {
+	ul.course-progress-navigation {
+		//background: #eee;
+		border-top: none !important;
+		li {
+			width: 50%;
+			text-align: center;
+			list-style: none;
+			a {
+				//background: #fefefe;
+				display: block;
+				padding: 1em 0;
+				color: #ccc;
+				line-height: 1.5em;
+				text-decoration: none;
+				span {
+					display: none;
+				}
+				&:hover {
+					background: #fff;
+					text-decoration: none;
+				}
+				&:before, &:after {
+					font-family: 'Fontawesome';
+					font-weight: bold;
+					font-size: 2em;
+					position: relative;
+					top: 3px;
+				}
+			}
+			&.prev {
+				float: left;
+				a {
+					border-right: none;
+					&:before {
+						content: "\f053";
+					}
+				}
+			}
+			&.next {
+				float: right;
+				a {
+					&:after {
+						content: "\f054";
+					}
+				}
+			}
+		}
+	}
+}

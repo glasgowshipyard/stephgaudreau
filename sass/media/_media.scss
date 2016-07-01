@@ -16,9 +16,16 @@ object {
 
 @media screen and (max-width: 1159px) {
 	.site-content .widget-area {
-		background-color: $charcoal;
+		background-color: $widget;
 		width: auto;
-		}
+		}	
+}
+
+@media screen and (min-width: 1840px) {
+	
+		.call-to-action-background-image {
+	    min-height: 1300px;
+	    }
 }
 	
 
@@ -42,21 +49,24 @@ object {
 	.site-content .widget-area {
 		float: right;
 		overflow: hidden;
-		background-color: $charcoal;
+		background-color: $widget;
 		max-width: $size__site-sidebar;
 		flex: 1;
 		}
+		
+	#call-to-action .front-right,
+   #call-to-action .front-left {
+        //font-size: 140%;
+    }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) and (max-width: 1159px) {
     .front-left {
-        width: 50%;
         float: left;
         padding-right: 5rem;
     }
 
     .front-right {
-        width: 50%;
         float: right;
         padding-left: 5rem;
 		text-align: right;
@@ -68,44 +78,47 @@ object {
 	}
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1020px) and (max-width: 1159px) {
 		
-    #call-to-action .front-left {
-        width: 30%;
-        float: left;
-        font-size: 200%;
-    }
-
-    #call-to-action .front-right {
-        width: 30%;
-        float: right;
-		text-align: right;
-		font-size: 200%;
+   #call-to-action .front-right,
+   #call-to-action .front-left {
+        //font-size: 140%;
     }
     
 	.front-left {
-        width: 50%;
         float: left;
     }
 
     .front-right {
-        width: 50%;
         float: right;
 		text-align: right;
     }
     
     .call-to-action-background-image {
-	    min-height: 900px;
-	    background-size: center center;
-
-	}
+	    min-height: 600px;
+	   	}
 }
 
-@media screen and (max-width: 1099px) {
-    .indent {
-        margin: 0;
-        padding: 0 4rem;
-    }
+//@media screen and (max-width: 1099px) {
+//    .indent {
+//        margin: 0;
+//        padding: 0 4rem;
+ //   }
+//}
+
+@media screen and (min-width: 1348px) and (max-width: 1839px) {
+	.indent {
+		max-width: 1600px
+	}
+	.call-to-action-background-image {
+	    min-height: 900px;
+	    }
+	    
+	#call-to-action .front-left,
+	#call-to-action .front-right {
+      //  width: 80%;
+        //font-size: 260%;
+    }       
 }
 
 @media screen and (max-width: 320px) {
@@ -182,6 +195,29 @@ object {
     .site-main {
 		padding: 0 5em;
 	}
+	
+	.call-to-action-background-image{
+	 background: no-repeat center top;
+	 background-size: cover;
+}
+	#call-to-action .front-left,
+	#call-to-action .front-right {
+        position: absolute;
+        padding: 0;
+        font-size: 1.9vw;
+        left: 1em;
+    }
+    
+    #call-to-action .section-title {
+		font-size: 5.5vw;
+		line-height: 1;
+}    	
+	.front-right,
+	.front-left {
+        width: 50%;
+        padding: 0 5em;
+    }
+
 }
 
 
@@ -220,6 +256,10 @@ object {
 	}
 	
 .main-navigation ul ul a { width: 100%; }
+
+.call-to-action-background-image{
+	 background: no-repeat 95% 25%;
+	 }
 
 .woocommerce a.button {
 font-size: .8em !important;

@@ -149,7 +149,7 @@ function stephgaudreau_scripts() {
 	
 	wp_enqueue_style('stephgaudreau-google-fonts','https://fonts.googleapis.com/css?family=Source+Sans+Pro', $in_footer);
 	
-	wp_enqueue_style('stephgaudreau-fontawesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', $in_footer);
+	wp_enqueue_style('stephgaudreau-fontawesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', $in_footer);
 	
 	wp_enqueue_script( 'stephgaudreau-smoothscroll', get_template_directory_uri() . '/js/stephscripts.js', array(jquery), '20160101', true , $in_footer);
 
@@ -168,6 +168,53 @@ function remove_jetpack_styles(){
 wp_deregister_style('grunion.css'); // Grunion contact form
 }
 add_action('wp_print_styles', 'remove_jetpack_styles');
+
+/**
+ * Declare Theme Support for Woocommerce.
+ */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+/**
+ * Remove Sensei Wrappers
+ */
+global $woothemes_sensei;
+remove_action( 'sensei_before_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper' ), 10 );
+remove_action( 'sensei_after_main_content', array( $woothemes_sensei->frontend, 'sensei_output_content_wrapper_end' ), 10 );
+
+add_action('sensei_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('sensei_after_main_content', 'my_theme_wrapper_end', 10);
+/**
+ * Begin Sensei Page
+ */
+function my_theme_wrapper_start() {
+	echo '<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">';
+}
+/**
+ * End Sensei Page
+ */
+function my_theme_wrapper_end() {
+  echo '</main><!-- #main -->
+	</div><!-- #primary -->';
+	get_sidebar();
+}
+
+/**
+ * Declare Theme Support for Sensei.
+ */
+add_action( 'after_setup_theme', 'declare_sensei_support' );
+function declare_sensei_support() {
+    add_theme_support( 'sensei' );
+}
+
+/**
+ * Disable the fucking shit out of Sensei's CSS.
+ */
+ 
+add_filter( 'sensei_disable_styles', '__return_true' );
 
 /**
  * Implement the Custom Header feature.

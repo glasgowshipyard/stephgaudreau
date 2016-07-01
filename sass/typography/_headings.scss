@@ -12,10 +12,13 @@ h2 {
 	text-transform: uppercase;
 	}
 
-h2.widget-title {
-	font-family: $font__side;
+h2.widget-title,
+h2.course-title,
+h2.course-title a {
+	font-family: "Knockout 33 A", "Knockout 33 B", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: .2em;
+	color: $charcoal;
 	}
 	
 .site-header {

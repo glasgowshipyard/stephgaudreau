@@ -15,10 +15,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'stephgaudreau' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'stephgaudreau' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'stephgaudreau' ), 'stephgaudreau', '<a href="http://basicbarbell.com" rel="designer">Killinski</a>' ); ?>
-		</div><!-- .site-info -->
+			<span class="copyright">Copyright &copy; Stephanie Gaudreau<span class="sg"> | </span>Steph Gaudreau&reg; 2011 - <?php echo date('Y'); ?></span></div><div class="mumbo-jumbo"><span class="terms"><a href="/legal-terms-of-use"> Terms of Use</a></span> | <span class="terms"><a href="/privacy-policy"> Privacy Policy</a></span></div>
+		<div class"made-by"><?php printf( esc_html__( 'Hand Built by %2$s.', 'stephgaudreau' ), 'stephgaudreau', '<a href="http://glasgowshipyard.com" rel="designer">Glasgow Shipyard</a>' ); ?></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
