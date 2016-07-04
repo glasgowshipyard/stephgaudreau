@@ -217,6 +217,15 @@ function declare_sensei_support() {
 add_filter( 'sensei_disable_styles', '__return_true' );
 
 /**
+ * TRY????? To remove drop emails in Sensei.
+ */
+
+function sensei_cust_remove_content_drip_emails() { 
+remove_all_actions( 'woo_scd_daily_cron_hook' );
+}
+add_action( 'init', 'sensei_cust_remove_content_drip_emails' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
