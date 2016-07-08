@@ -1607,6 +1607,14 @@ ul.course-container {
   text-align: center;
 }
 
+span.onsale {
+  background-color: #f45747 !important;
+  color: #fff !important;
+  min-height: 4em !important;
+  min-width: 4em !important;
+  padding: .3em !important;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
